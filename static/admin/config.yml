@@ -6,6 +6,21 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "recipe"
+    label: "recipe"
+    folder: "src/pages/recipe"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "recipe"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: Ingredients, name: ingrendients, widget: list, fields: [{label:Ingredient, name: ingredient, widget: text}]}
+      - {label: Images, name: images, widget: list, fields: [{label: "Image", name: "image", widget: image}]}
+      - {label: "Cuisine", name: "Cuisine", widget: "select", multiple: true, options: ["Mexican", "Indian", "Thai"]}
+      - {label: "Tags", name: "tags", widget: "select", multiple: true, options: ["Spicy", "Sweet", "Dev"]}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
