@@ -1,0 +1,10 @@
+.editorconfig
+package-lock.json
+
+build/
+public/
+.github/
+.dependabot/
+.cache/
+static/
+bulid/
