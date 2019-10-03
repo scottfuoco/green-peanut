@@ -28,7 +28,7 @@ collections:
           fields:
             [
               { label: "Ingredient", name: "ingredient", widget: "string" },
-              { label: "Measurement", name: "measurement", widget: "number" },
+              { label: "Measurement", name: "measurement", widget: "string" },
               { label: "Units", name: "units", widget: "string" },
             ],
         }
@@ -50,7 +50,7 @@ collections:
           name: "tags",
           widget: "select",
           multiple: true,
-          options: ["Spicy", "Sweet", "Dev"],
+          options: ["Spicy", "Sweet", "Tangy"],
         }
 
   - name: "blog"
