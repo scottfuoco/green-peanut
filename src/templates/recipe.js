@@ -11,7 +11,7 @@ const Recipe = ({ data }) => {
 
   return (
     <Layout>
-      <div>{JSON.stringify(recipe.frontmatter.title)}</div>
+      <div>{JSON.stringify(recipe.frontmatter.ingredients)}</div>
     </Layout>
   );
 };
@@ -28,9 +28,13 @@ export const pageQuery = graphql`
   query RecipeByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      html
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
         description
+        ingredients
+        tags
       }
     }
   }

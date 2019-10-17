@@ -8,6 +8,7 @@ const RecipeRoll = ({ data }) => {
 
   return (
     <div className="columns is-multiline">
+      <h1>Single Recipe</h1>
       {recipes &&
         recipes.map(({ node: recipe }) => (
           <div>{recipe.frontmatter.title}</div>
