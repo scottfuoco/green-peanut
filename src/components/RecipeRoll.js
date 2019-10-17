@@ -10,9 +10,7 @@ const RecipeRoll = ({ data }) => {
     <div className="columns is-multiline">
       {recipes &&
         recipes.map(({ node: recipe }) => (
-          <div>
-            {recipe.frontmatter.ingredients.map(ingredient => ingredient)}
-          </div>
+          <div>{recipe.frontmatter.title}</div>
         ))}
     </div>
   );
@@ -45,7 +43,6 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
-                ingredients
               }
             }
           }
