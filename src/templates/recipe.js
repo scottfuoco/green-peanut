@@ -33,7 +33,11 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        ingredients
+        ingredients {
+          ingrendient
+          measurement
+          units
+        }
         tags
       }
     }
