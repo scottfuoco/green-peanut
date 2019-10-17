@@ -34,7 +34,7 @@ export const pageQuery = graphql`
         title
         description
         ingredients {
-          ingrendient
+          ingredient
           measurement
           units
         }
